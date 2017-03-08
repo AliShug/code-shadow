@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle code-shadow",
+        "command": "code-shadow:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "code-shadow",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "code-shadow:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

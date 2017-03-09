@@ -2,8 +2,8 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Toggle code-shadow",
-        "command": "code-shadow:toggle"
+        "label": "Code Shadow",
+        "command": "code-shadow:blop"
       }
     ]
   },
@@ -15,8 +15,8 @@
           "label": "code-shadow",
           "submenu": [
             {
-              "label": "Toggle",
-              "command": "code-shadow:toggle"
+              "label": "Blop",
+              "command": "code-shadow:blop"
             }
           ]
         }

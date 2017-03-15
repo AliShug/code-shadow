@@ -7,12 +7,16 @@
 .code-shadow {
 }
 
-.overlay-example {
-  //width: 30px;
-  height: 45px;
-  background-color: blue;
+code-shadow {
+    display: block;
+    position: absolute;
+    padding: 0.3em;
+    border-radius: 0.4em;
+    left: 576px;
+    bottom: -0.3em;
 }
 
-.is-focused .overlay-example {
-    background-color: red;
+code-shadow.shadow-function {
+    background-color: fadeout(#88F, 40%);
+    color: fadeout(#FFF, 30%);
 }

@@ -3,13 +3,13 @@
   "main": "./lib/code-shadow",
   "version": "0.0.0",
   "description": "",
-  "keywords": [
-  ],
+  "keywords": [],
   "repository": "https://github.com/AliShug/code-shadow",
   "license": "MIT",
   "engines": {
     "atom": ">=1.12.0 <2.0.0"
   },
   "dependencies": {
+    "acorn": "^4.0.11"
   }
 }

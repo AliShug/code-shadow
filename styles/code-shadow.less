@@ -10,13 +10,27 @@
 code-shadow {
     display: block;
     position: absolute;
-    padding: 0.3em;
-    border-radius: 0.4em;
-    bottom: -0.3em;
+    padding: 2px;
+    border-radius: 3px;
     z-index: 1;
+    font-size: 0.8em;
 }
 
-code-shadow.shadow-function {
-    background-color: fadeout(#88F, 70%);
+code-shadow.line-element {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: #88F;
+    width: 100px;
+    clip: rect(0px, 6px, 9999999px, 0px);
+}
+
+code-shadow.text-element {
     color: fadeout(#FFF, 30%);
+}
+
+code-shadow-container {
+    display: block;
+    position: absolute;
+    width: 500px;
 }

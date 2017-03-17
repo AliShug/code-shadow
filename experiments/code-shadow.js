@@ -1,4 +1,5 @@
 'use babel';
+/* jshint esversion: 6 */
 
 import CodeShadowView from './code-shadow-view';
 import { CompositeDisposable } from 'atom';
@@ -15,7 +16,7 @@ export default {
       'code-shadow:blop': () => this.blop()
     }));
 
-    console.log("I'm here yay")
+    console.log("I'm here yay");
   },
 
   deactivate() {
@@ -29,15 +30,15 @@ export default {
   // },
 
   blop() {
-    console.log("Blopping")
-    let editor
+    console.log("Blopping");
+    let editor;
     if (editor = atom.workspace.getActiveTextEditor()) {
-      let marker = editor.getLastCursor().marker
-      item = document.createElement('div')
-      item.classList.add('overlay-example')
-      item.classList.add('popover-list')
-      editor.decorateMarker(marker, {type: 'overlay', item})
-      console.log(item)
+      let marker = editor.getLastCursor().marker;
+      item = document.createElement('div');
+      item.classList.add('overlay-example');
+      item.classList.add('popover-list');
+      editor.decorateMarker(marker, {type: 'overlay', item});
+      console.log(item);
     }
   }
 

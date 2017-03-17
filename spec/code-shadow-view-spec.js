@@ -1,4 +1,5 @@
 'use babel';
+/* jshint esversion: 6 */
 
 import CodeShadowView from '../lib/code-shadow-view';
 

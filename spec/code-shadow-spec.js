@@ -1,4 +1,5 @@
 'use babel';
+/* jshint esversion: 6 */
 
 import CodeShadow from '../lib/code-shadow';
 

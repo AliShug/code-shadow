@@ -3,15 +3,11 @@
 // See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
 // for a full listing of what's available.
 @import "ui-variables";
-
-.code-shadow {
-}
+@import "syntax-variables";
 
 code-shadow {
     display: block;
     position: absolute;
-    padding: 2px;
-    border-radius: 3px;
     z-index: 1;
     font-size: 0.8em;
 }
@@ -27,6 +23,8 @@ code-shadow.line-element {
 
 code-shadow.text-element {
     color: fadeout(#FFF, 30%);
+    background-color: @syntax-background-color;
+    width: 500px;
 }
 
 code-shadow-container {

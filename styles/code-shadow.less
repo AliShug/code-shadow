@@ -9,7 +9,6 @@ code-shadow {
     display: block;
     position: absolute;
     z-index: 1;
-    font-size: 0.8em;
 }
 
 code-shadow.line-element {
@@ -22,9 +21,42 @@ code-shadow.line-element {
 }
 
 code-shadow.text-element {
-    color: fadeout(#FFF, 30%);
-    background-color: @syntax-background-color;
-    width: 500px;
+    //color: fadeout(#FFF, 30%);
+    font-size: 1em;
+    color: @syntax-background-color;
+    background-color: #88F;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 2px;
+    // border-color: @syntax-background-color;
+    // border-width: 1px;
+    // border-style: solid;
+    //background-color: @syntax-background-color;
+    //width: 500px;
+}
+
+// Classes
+code-shadow.text-element.class {
+    background-color: mix(@syntax-color-class, @syntax-background-color);
+}
+code-shadow.line-element.class {
+    border-color: mix(@syntax-color-class, @syntax-background-color);
+}
+
+// Keywords
+code-shadow.text-element.keyword {
+    background-color: mix(@syntax-color-keyword, @syntax-background-color);
+}
+code-shadow.line-element.keyword {
+    border-color: mix(@syntax-color-keyword, @syntax-background-color);
+}
+
+// Functions
+code-shadow.text-element.function {
+    background-color: mix(@syntax-color-function, @syntax-background-color);
+}
+code-shadow.line-element.function {
+    border-color: mix(@syntax-color-function, @syntax-background-color);
 }
 
 code-shadow-container {

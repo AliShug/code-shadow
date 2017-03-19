@@ -12,6 +12,7 @@
     "acorn": "^4.0.11",
     "lex": "^1.7.9",
     "minimist": "^1.2.0",
-    "present": "^1.0.0"
+    "present": "^1.0.0",
+    "stats-array": "^0.1.2"
   }
 }

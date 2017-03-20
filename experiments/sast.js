@@ -13,7 +13,7 @@ var present = require('present');
 var timeit = false;
 
 // filePath = 'experiments\\test.js';
-filePath = 'experiments\\sast.js';
+filePath = 'lib\\code-shadow-view.js';
 
 function show(node, st) {
   if (node.loc.end.line - node.loc.start.line < 6) {

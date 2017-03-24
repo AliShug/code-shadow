@@ -1,6 +1,8 @@
 /* jshint esversion: 6 */
 
 var acorn = require('acorn/dist/acorn_loose');
+// var acorn = require('acorn');
+var esprima = require('esprima');
 var walk = require('acorn/dist/walk');
 var present = require('present');
 var StatsArray = require('stats-array');
@@ -10,10 +12,11 @@ var path = require('path');
 
 var present = require('present');
 
-var timeit = false;
+var timeit = true;
 
 // filePath = 'experiments\\test.js';
-filePath = 'lib\\code-shadow-view.js';
+// filePath = 'lib\\code-shadow-view.js';
+filePath = 'experiments\\jquery-3.2.0.js';
 
 function show(node, st) {
   if (node.loc.end.line - node.loc.start.line < 6) {
@@ -37,6 +40,8 @@ fs.readFile(filePath, {
       let last = start;
       for (var i = 0; i < iters; i++) {
         program = acorn.parse_dammit(data, {'locations':true});
+        // program = esprima.parse(data);
+        // program = acorn.parse(data);
         let now = present();
         timings[i] = now - last;
         last = now;
@@ -51,6 +56,8 @@ fs.readFile(filePath, {
 
         console.log("The file was saved!");
       });
+
+      return;
     }
     else {
       program = acorn.parse_dammit(data, {'locations': true});

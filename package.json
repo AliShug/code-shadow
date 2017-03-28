@@ -1,9 +1,14 @@
 {
   "name": "code-shadow",
   "main": "./lib/code-shadow",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "At-a-glance structural guide for JavaScript code in Atom",
-  "keywords": ["atom", "javascript", "es6", "acorn"],
+  "keywords": [
+    "atom",
+    "javascript",
+    "es6",
+    "acorn"
+  ],
   "repository": "https://github.com/AliShug/code-shadow",
   "license": "MIT",
   "engines": {

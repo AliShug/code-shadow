@@ -1,26 +1,6 @@
 {
   "context-menu": {
-    "atom-text-editor": [
-      {
-        "label": "Code Shadow",
-        "command": "code-shadow:blop"
-      }
-    ]
+    "atom-text-editor": []
   },
-  "menu": [
-    {
-      "label": "Packages",
-      "submenu": [
-        {
-          "label": "code-shadow",
-          "submenu": [
-            {
-              "label": "Blop",
-              "command": "code-shadow:blop"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  "menu": []
 }

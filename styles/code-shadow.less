@@ -5,6 +5,32 @@
 @import "ui-variables";
 @import "syntax-variables";
 
+// Screwing with the editor & minimap layout :)
+atom-text-editor[with-minimap][with-codeshadow] {
+    display: flex;
+
+    .editor--private {
+        order: 2;
+        flex: 1 1 80%;
+        width: 80%;
+    }
+
+    atom-text-editor-minimap {
+        &:not([stand-alone]) {
+            flex-shrink: 1;
+        }
+    }
+}
+
+code-shadow-pane {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    -webkit-user-select: none;
+    order: 3;
+    flex: 1 0 350px;
+}
+
 code-shadow {
     display: block;
     position: absolute;
@@ -28,7 +54,7 @@ code-shadow.text-element {
     border-radius: 5px;
     padding-left: 5px;
     padding-right: 2px;
-    box-shadow: 5px 0px 5px @syntax-background-color;
+    box-shadow: 5px 0 5px @syntax-background-color;
     cursor: pointer;
     // border-color: @syntax-background-color;
     // border-width: 1px;
@@ -36,73 +62,83 @@ code-shadow.text-element {
     //background-color: @syntax-background-color;
     //width: 500px;
 }
-
 // Classes
 code-shadow.text-element.class {
     background-color: mix(@syntax-color-class, @syntax-background-color);
 }
+
 code-shadow.line-element.class {
     border-color: mix(@syntax-color-class, @syntax-background-color);
 }
+
 code-shadow.text-element.class.highlight {
     background-color: @syntax-color-class;
 }
+
 code-shadow.line-element.class.highlight {
     border-color: @syntax-color-class;
 }
-
 // Keywords
 code-shadow.text-element.keyword {
     background-color: mix(@syntax-color-keyword, @syntax-background-color);
 }
+
 code-shadow.line-element.keyword {
     border-color: mix(@syntax-color-keyword, @syntax-background-color);
 }
+
 code-shadow.text-element.keyword.highlight {
     background-color: @syntax-color-keyword;
 }
+
 code-shadow.line-element.keyword.highlight {
     border-color: @syntax-color-keyword;
 }
-
 // Functions
 code-shadow.text-element.function {
     background-color: mix(@syntax-color-function, @syntax-background-color);
 }
+
 code-shadow.line-element.function {
     border-color: mix(@syntax-color-function, @syntax-background-color);
 }
+
 code-shadow.text-element.function.highlight {
     background-color: @syntax-color-function;
 }
+
 code-shadow.line-element.function.highlight {
     border-color: @syntax-color-function;
 }
-
 // Plain
 code-shadow.text-element.plain {
     background-color: mix(@syntax-text-color, @syntax-background-color);
 }
+
 code-shadow.line-element.plain {
     border-color: mix(@syntax-text-color, @syntax-background-color);
 }
+
 code-shadow.text-element.plain.highlight {
     background-color: @syntax-text-color;
 }
+
 code-shadow.line-element.plain.highlight {
     border-color: @syntax-text-color;
 }
-
 // Variable
 code-shadow.text-element.variable {
     background-color: mix(@syntax-color-variable, @syntax-background-color);
 }
+
 code-shadow.line-element.variable {
     border-color: mix(@syntax-color-variable, @syntax-background-color);
 }
+
 code-shadow.text-element.variable.highlight {
     background-color: @syntax-color-variable;
 }
+
 code-shadow.line-element.variable.highlight {
     border-color: @syntax-color-variable;
 }

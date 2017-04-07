@@ -5,6 +5,16 @@
 @import "ui-variables";
 @import "syntax-variables";
 
+atom-text-editor[with-codeshadow] {
+    display: flex;
+
+    .editor--private {
+        order: 2;
+        flex: 1 1 80%;
+        width: 80%;
+    }
+}
+
 // Screwing with the editor & minimap layout :)
 atom-text-editor[with-minimap][with-codeshadow] {
     display: flex;
@@ -28,7 +38,19 @@ code-shadow-pane {
     position: relative;
     -webkit-user-select: none;
     order: 3;
-    flex: 1 0 350px;
+    flex: 0.01 0 350px;
+}
+
+code-shadow-resize-handle {
+    display: block;
+    position: absolute;
+    left: -5px;
+    top: 0px;
+    width: 8px;
+    height: 100%;
+    z-index: 3;
+    -webkit-user-select: none;
+    cursor: ew-resize;
 }
 
 code-shadow {
